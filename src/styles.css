@@ -18,11 +18,16 @@
 html, body {
     background-color: #222;
     min-height: 100%;
-    background-image: url("RestaurantBackgroundMobile.jpg");
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("RestaurantBackgroundMobile.jpg");
     background-size: cover;
     background-position: center center;
 
+
 }
+
+
 
 header {
     position: fixed;
@@ -121,8 +126,22 @@ nav ul li a.active::after {
 }
 
 
-#content h1{
+#content h1, #content h2, #content h3 {
     color:#f0e4c8;
+}
+#content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.9);
+    text-align: center;
+}
+
+#content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.8);
 }
 
 #content p {
@@ -135,6 +154,43 @@ nav ul li a.active::after {
     margin-top: 40px;
     font-weight: 600;
     font-style: italic;
+}
+
+
+#content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 30px;
+}
+
+#content ul li {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column; 
+    gap: 0.25rem;               
+    padding-left: 0;              
+    position: relative;
+}
+
+
+#content ul li h3 {
+    margin: 0;
+    padding: 0;
+    color: var(--accent-gold);
+    font-size: 1.3rem;       
+    line-height: 1.2;
+}
+
+
+#content ul li p,
+#content ul li .description,
+#content ul li :not(h3) {  
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    color: var(--text-cream);
 }
 
 @media (min-width: 768px) {
@@ -153,8 +209,9 @@ nav ul li a.active::after {
     }
 
     html, body {
-    background-image: url("RestaurantBackgroundDesktop.png");
-    
+        background-image: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("RestaurantBackgroundDesktop.png");  
 
 
     }
