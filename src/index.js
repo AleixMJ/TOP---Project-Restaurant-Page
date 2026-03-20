@@ -23,7 +23,3 @@ document.getElementById("nav-contact").addEventListener("click", () => {
   content.innerHTML = "";
   content.appendChild(contact);
 });
-
-
-console.log("Hello, Webpack!");
-alert("Hello, Webpack!");
